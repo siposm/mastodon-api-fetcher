@@ -1,0 +1,22 @@
+curl -X POST \
+	-F 'client_id=MmP_oIhzXpp5p-TShq2EHtsYL7q16pwtT7w9KAN-Fqk' \
+	-F 'client_secret=ixQsRLtPGRgrYjfJ9miz7bLHrjbv3Ve-VZoA37LzGto' \
+	-F 'redirect_uri=urn:ietf:wg:oauth:2.0:oob' \
+	-F 'grant_type=client_credentials' \
+	https://mastodon.social/oauth/token
+	
+	
+	
+  % Total    % Received % Xferd  Average Speed   Time    Time     Time  Current
+                                 Dload  Upload   Total   Spent    Left  Speed
+100   698    0   123  100   575    149    697 --:--:-- --:--:-- --:--:--   846{"access_token":"zAV7HjvrQuS2UbwUUo6BgbgPx-GKR9w7Om9jL83K1sw","token_type":"Bearer","scope":"read","created_at":1581248264}
+
+
+curl \
+	-H 'Authorization: Bearer zAV7HjvrQuS2UbwUUo6BgbgPx-GKR9w7Om9jL83K1sw' \
+	https://mastodon.social/api/v1/apps/verify_credentials
+	
+	
+curl \
+	-H 'Authorization: Bearer zAV7HjvrQuS2UbwUUo6BgbgPx-GKR9w7Om9jL83K1sw' \
+	https://mastodon.social/api/v1/accounts/1097067
